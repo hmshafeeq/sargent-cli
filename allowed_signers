@@ -1,0 +1,2 @@
+# The release key. Changing it breaks sargent upgrade for older binaries.
+sargent-release ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvQSHtc5NQo0xouHE+qvsyEKyZCMhPmsSD9rX+/7iVZ sargent-release
