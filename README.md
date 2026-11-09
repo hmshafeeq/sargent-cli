@@ -9,7 +9,7 @@ Add this to the repo's `.pre-commit-config.yaml`:
 ```yaml
 default_install_hook_types: [pre-commit, pre-push, commit-msg]
 repos:
-  - repo: https://github.com/hmshafeeq/sargent-dist
+  - repo: https://github.com/hmshafeeq/sargent-cli
     rev: v3.4.0
     hooks:
       - id: sargent-commit
@@ -24,7 +24,7 @@ If the download fails, the commit stops with a `fix:` line. Check the network an
 ## Install the CLI
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-dist/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-cli/main/install.sh | sh
 ```
 
 The script installs to `~/.local/bin/sargent`. To install somewhere else, set `SARGENT_INSTALL_DIR`. To install a named release, run `sh -s -- v3.4.0` in place of `sh`.

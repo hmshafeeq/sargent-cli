@@ -1,6 +1,6 @@
 #!/bin/sh
 # Installs the sargent CLI from a signed release.
-#   curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-dist/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-cli/main/install.sh | sh
 #   curl -fsSL .../install.sh | sh -s -- v3.4.0      a named release
 # SARGENT_INSTALL_DIR replaces ~/.local/bin.
 set -eu
@@ -11,7 +11,7 @@ set -eu
 # the allowed_signers file; the binary must then match its sum and print its
 # tag. `sargent upgrade` checks the same three things.
 
-SARGENT_DIST_BASE=${SARGENT_DIST_BASE:-https://github.com/hmshafeeq/sargent-dist/releases}
+SARGENT_DIST_BASE=${SARGENT_DIST_BASE:-https://github.com/hmshafeeq/sargent-cli/releases}
 
 sargent_die() {
 	echo "sargent: $*" >&2

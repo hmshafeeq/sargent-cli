@@ -4,7 +4,7 @@
 # the allowed_signers file; the binary must then match its sum and print its
 # tag. `sargent upgrade` checks the same three things.
 
-SARGENT_DIST_BASE=${SARGENT_DIST_BASE:-https://github.com/hmshafeeq/sargent-dist/releases}
+SARGENT_DIST_BASE=${SARGENT_DIST_BASE:-https://github.com/hmshafeeq/sargent-cli/releases}
 
 sargent_die() {
 	echo "sargent: $*" >&2
