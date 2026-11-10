@@ -1,10 +1,10 @@
-# Written by scripts/dist-publish.sh for v3.4.1. Do not edit here.
+# Written by scripts/dist-publish.sh for v3.5.0-rc1. Do not edit here.
 # Each entry names its tag, because pre-commit's clone holds no tags.
 
 - id: sargent-commit
   name: sargent pre-commit checks
   description: Rejects dotfiles missing the leading dot, forbidden paths, a .gitignore that lost half its bytes, secret-shaped text in added lines, and misplaced docs/ or .scratch/ files.
-  entry: hooks/run.sh v3.4.1 git pre-commit
+  entry: hooks/run.sh v3.5.0-rc1 git pre-commit
   language: script
   stages: [pre-commit]
   pass_filenames: false
@@ -13,7 +13,7 @@
 - id: sargent-msg
   name: sargent commit message format
   description: Conventional-commit subject and body hygiene. Rejects AI attribution trailers, including Co-Authored-By.
-  entry: hooks/run.sh v3.4.1 git commit-msg
+  entry: hooks/run.sh v3.5.0-rc1 git commit-msg
   language: script
   stages: [commit-msg]
 
@@ -23,7 +23,7 @@
 - id: sargent-push
   name: sargent protected branches
   description: Refuses to delete or force-update main, master, dev, staging and production.
-  entry: hooks/run.sh v3.4.1 git pre-push
+  entry: hooks/run.sh v3.5.0-rc1 git pre-push
   language: script
   stages: [pre-push]
   pass_filenames: false
