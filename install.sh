@@ -1,7 +1,7 @@
 #!/bin/sh
 # Installs the sargent CLI from a signed release.
 #   curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-cli/main/install.sh | sh
-#   curl -fsSL .../install.sh | sh -s -- v3.5.0-rc8      a named release
+#   curl -fsSL .../install.sh | sh -s -- v3.5.0-rc9      a named release
 # SARGENT_INSTALL_DIR replaces ~/.local/bin.
 set -eu
 
