@@ -10,7 +10,7 @@ Add this to the repo's `.pre-commit-config.yaml`:
 default_install_hook_types: [pre-commit, pre-push, commit-msg]
 repos:
   - repo: https://github.com/hmshafeeq/sargent-cli
-    rev: v3.5.0-rc5
+    rev: v3.5.0-rc7
     hooks:
       - id: sargent-commit
       - id: sargent-msg
@@ -33,14 +33,14 @@ A final release (a tag with no hyphen) does not carry `windows-x64` yet. Only re
 curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-cli/main/install.sh | sh
 ```
 
-The script installs to `~/.local/bin/sargent`. To install somewhere else, set `SARGENT_INSTALL_DIR`. To install a named release, run `sh -s -- v3.5.0-rc5` in place of `sh`.
+The script installs to `~/.local/bin/sargent`. To install somewhere else, set `SARGENT_INSTALL_DIR`. To install a named release, run `sh -s -- v3.5.0-rc7` in place of `sh`.
 
 ## Upgrade the CLI
 
 | Command | Result |
 |---|---|
 | `sargent upgrade` | Installs the latest release and keeps the old binary as `sargent.previous`. A release candidate upgrades to its release. |
-| `sargent upgrade v3.5.0-rc5` | Installs that release. A release you already run changes nothing. |
+| `sargent upgrade v3.5.0-rc7` | Installs that release. A release you already run changes nothing. |
 | `sargent upgrade --check` | Prints the installed and latest tags. Exits 10 when a newer release exists. |
 | `sargent upgrade --rollback` | Swaps `sargent` and `sargent.previous`. |
 
