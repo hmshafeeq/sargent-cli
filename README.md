@@ -10,12 +10,14 @@ Add this to the repo's `.pre-commit-config.yaml`:
 default_install_hook_types: [pre-commit, pre-push, commit-msg]
 repos:
   - repo: https://github.com/hmshafeeq/sargent-cli
-    rev: v3.7.0-rc1
+    rev: v3.7.0-rc2
     hooks:
       - id: sargent-commit
       - id: sargent-msg
       - id: sargent-push
 ```
+
+To run the rules of `.sargent/sargent.jsonc` (such as `rules.comments`) on every commit, add `- id: sargent-check` under `sargent-commit`. It runs `sargent check --staged` against `.sargent/baseline.tsv`. It does not run on Windows: there the commit stops, so leave it out of a repo that a teammate commits to from Git Bash.
 
 To pin the commit instead of the tag, run `pre-commit autoupdate --freeze --repo https://github.com/hmshafeeq/sargent-cli` after you add it. The next section says why a commit pin is stronger.
 
@@ -33,14 +35,14 @@ A final release (a tag with no hyphen) does not carry `windows-x64` yet. Only re
 curl -fsSL https://raw.githubusercontent.com/hmshafeeq/sargent-cli/main/install.sh | sh
 ```
 
-The script installs to `~/.local/bin/sargent`. To install somewhere else, set `SARGENT_INSTALL_DIR`. To install a named release, run `sh -s -- v3.7.0-rc1` in place of `sh`.
+The script installs to `~/.local/bin/sargent`. To install somewhere else, set `SARGENT_INSTALL_DIR`. To install a named release, run `sh -s -- v3.7.0-rc2` in place of `sh`.
 
 ## Upgrade the CLI
 
 | Command | Result |
 |---|---|
 | `sargent upgrade` | Installs the latest release and keeps the old binary as `sargent.previous`. A release candidate upgrades to its release. |
-| `sargent upgrade v3.7.0-rc1` | Installs that release. A release you already run changes nothing. |
+| `sargent upgrade v3.7.0-rc2` | Installs that release. A release you already run changes nothing. |
 | `sargent upgrade --check` | Prints the installed and latest tags. Exits 10 when a newer release exists. |
 | `sargent upgrade --rollback` | Swaps `sargent` and `sargent.previous`. |
 
